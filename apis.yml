@@ -1,8 +1,23 @@
 aid: airplane
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/airplane.png
 name: Airplane
-description: 'Airplane is a company surfaced as a portfolio company of benchmark and added to the API
-  Evangelist network as a stub for enrichment. Sector: developer-tools. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Airplane was a Benchmark-backed developer platform for building internal tools, dashboards,
+  and operational workflows by turning scripts into shareable tasks and UIs. It was acquired by Airtable
+  in 2023 and the product was subsequently wound down. As of this enrichment pass the company is defunct:
+  the website www.airplane.dev no longer connects, the airplane.dev apex resolves to a domain-parking IP,
+  and the airplanedev GitHub organization was archived on 2026-02-03 with no public repositories. No live
+  API, developer portal, documentation host, SDK, or event surface remains to enrich.'
 url: https://raw.githubusercontent.com/api-evangelist/airplane/refs/heads/main/apis.yml
 x-type: company
 x-source: benchmark-portfolio
@@ -11,9 +26,17 @@ x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
 modified: '2026-07-17'
+x-enriched: '2026-07-17'
 tags:
 - Company
 - Developer Tools
+- Internal Tools
+- Workflows
+- Automation
+- Defunct
+x-status: defunct
+x-status-detail: 'Website unreachable (HTTP 000); GitHub org airplanedev archived 2026-02-03 with no public
+  repos; airplane.dev parked. Acquired by Airtable (2023), product wound down.'
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -21,5 +44,12 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/airplane-domain-security.yml
 - type: Website
   url: https://www.airplane.dev
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
